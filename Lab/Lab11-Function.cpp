@@ -55,7 +55,7 @@ void cal(int number){
 
     int output = char11 + char22 + char33 ; // + char44
 
-    printf( "%d\n" , output );
+    // printf( "%d\n" , output );
 
     if ( N == output )
     {
