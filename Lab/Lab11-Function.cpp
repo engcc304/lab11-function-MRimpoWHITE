@@ -28,8 +28,24 @@
 
 void cal(int number){
 
-    int char1, char2, char3, char4;
+    int char1, char2, char3, char4, power = 3;
     int N = number ; 
+
+    if (number > 999)
+    {
+        power = 4 ;
+    }
+    else if (number > 99)
+    {
+        power = 3 ;
+    }
+    else
+    {
+        power = 2 ;
+    }
+    
+    
+    
 
     char1 = number % 10;
 
@@ -37,23 +53,23 @@ void cal(int number){
     char2 = number % 10;
 
     number /= 10;
-    char3 = number ;
+    char3 = number % 10;
 
-    // number /= 1 ;
-    // char4 = number ;
+    number /= 10 ;
+    char4 = number ;
 
-    int char11 = char1 , char22 = char2, char33 = char3; // char44 = char4
+    int char11 = char1 , char22 = char2, char33 = char3, char44 = char4 ;
 
 
-    for (int i = 1; i < 3; i++ )
+    for (int i = 1; i < power ; i++ )
     {
         char11 = char11*char1 ;
         char22 = char22*char2 ;
         char33 = char33*char3 ;
-        // char44 = char44*char4 ;
+        char44 = char44*char4 ;
     }
 
-    int output = char11 + char22 + char33 ; // + char44
+    int output = char11 + char22 + char33 + char44 ;
 
     // printf( "%d\n" , output );
 
