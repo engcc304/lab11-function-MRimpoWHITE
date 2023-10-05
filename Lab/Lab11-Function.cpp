@@ -59,11 +59,11 @@ void cal(int number){
 
     if ( N == output )
     {
-        printf( "pass." ) ; 
+        printf( "Pass." ) ; 
     }
     else
     {
-        printf( "Not pass." );
+        printf( "Not Pass." );
     }
     
 
