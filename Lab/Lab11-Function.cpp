@@ -26,9 +26,56 @@
 
 #include <stdio.h>
 
-int main() {
+void cal(int number){
 
-    //--| YOUR CODE HERE
+    int char1, char2, char3, char4;
+    int N = number ; 
+
+    char1 = number % 10;
+
+    number /= 10 ;
+    char2 = number % 10;
+
+    number /= 10;
+    char3 = number ;
+
+    // number /= 1 ;
+    // char4 = number ;
+
+    int char11 = char1 , char22 = char2, char33 = char3; // char44 = char4
+
+
+    for (int i = 1; i < 3; i++ )
+    {
+        char11 = char11*char1 ;
+        char22 = char22*char2 ;
+        char33 = char33*char3 ;
+        // char44 = char44*char4 ;
+    }
+
+    int output = char11 + char22 + char33 ; // + char44
+
+    printf( "%d\n" , output );
+
+    if ( N == output )
+    {
+        printf( "pass." ) ; 
+    }
+    else
+    {
+        printf( "Not pass." );
+    }
+    
+
+}
+
+int main() {
+    int number ; 
+    printf ( "Enter Number:\n" ) ; 
+    scanf ( "%d" , &number ) ;
+
+    cal( number ) ;
 
     return 0 ;
+
 }//end main function
